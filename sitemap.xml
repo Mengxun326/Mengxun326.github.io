@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://meng-xun.top/link/index.html</loc>
+    
+    <lastmod>2023-09-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://meng-xun.top/categories/index.html</loc>
+    
+    <lastmod>2023-09-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://meng-xun.top/tags/index.html</loc>
+    
+    <lastmod>2023-09-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://meng-xun.top/2023/09/08/%E5%8D%9A%E5%AE%A2%E7%AE%80%E4%BB%8B/</loc>
     
     <lastmod>2023-09-08</lastmod>
@@ -30,24 +57,6 @@
   
   <url>
     <loc>https://meng-xun.top/about/index.html</loc>
-    
-    <lastmod>2023-09-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://meng-xun.top/tags/index.html</loc>
-    
-    <lastmod>2023-09-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://meng-xun.top/categories/index.html</loc>
     
     <lastmod>2023-09-06</lastmod>
     
