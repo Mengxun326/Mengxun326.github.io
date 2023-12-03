@@ -9,8 +9,37 @@
     <atom:link href="https://meng-xun.top/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 09 Nov 2023 13:52:14 GMT</pubDate>
+    <pubDate>Sun, 03 Dec 2023 14:18:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>C语言期中复习</title>
+      <link>https://meng-xun.top/2023/12/03/C%E8%AF%AD%E8%A8%80%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/</link>
+      <guid>https://meng-xun.top/2023/12/03/C%E8%AF%AD%E8%A8%80%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/</guid>
+      <pubDate>Sun, 03 Dec 2023 12:41:26 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;本站限个人学习和分享笔记使用，转载请注明出处。&lt;br&gt;快要考试啦，复习资料今日上新。(&lt;em&gt;^_^&lt;/em&gt;) ()&lt;/p&gt;
+&lt;h1 id=&quot;基础知识点&quot;&gt;&lt;a href=&quot;#基础知识点&quot; class=&quot;headerlink&quot; title=&quot;基础知识点&quot;&gt;&lt;/a&gt;基础知识</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>本站限个人学习和分享笔记使用，转载请注明出处。<br>快要考试啦，复习资料今日上新。(<em>^_^</em>) ()</p><h1 id="基础知识点"><a href="#基础知识点" class="headerlink" title="基础知识点"></a>基础知识点</h1><p><strong>总体上必须清楚的:</strong>  </p><ol><li>程序结构是三种: 顺序结构 , 循环结构 (三个循环结构), 选择结构 (if 和 switch)  </li><li>读程序都要从main()入口, 然后从最上面顺序往下读(碰到循环做循环,碰到选择做选择)。  </li><li>计算机的数据在电脑中保存是以 二进制的形式. 数据存放的位置就是 他的地址.  </li><li>bit是位 是指为0 或者1。 byte 是指字节, 一个字节 &#x3D; 八个位.  </li><li>一定要记住 二进制 如何划成 十进制。</li></ol><hr><p><strong>概念常考到的：</strong> </p><ol><li>编译预处理不是C语言的一部分，不再运行时间。C语言编译的程序称为源程序，它以ASCII数值存放在文本文件中。  </li><li>每个C语言程序中main函数是有且只有一个。  </li><li>在函数中不可以再定义函数。  </li><li>算法的是一定要有输出的，他可以没有输入。  </li><li>break可用于循环结构和switch语句。  </li><li>逗号运算符的级别最低。</li></ol><hr><h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><ol><li><strong>合法的用户标识符考查：</strong><br>合法的要求是由字母，数字，下划线组成。有其它元素就错了。<br>并且第一个必须为字母或则是下划线。第一个为数字就错了。<br>关键字不可以作为用户标识符号。main  define  scanf  printf 都不是关键字。迷惑你的地方If是可以做为用户标识符。因为If中的第一个字母大写了，所以不是关键字。  </li><li><strong>实型数据的合法形式：</strong><br>2.333e-1 就是合法的，且数据是2.333×10-1。<br><strong>考试口诀：e前e后必有数，e后必为整数。</strong>  </li><li><strong>字符数据的合法形式:</strong><br>‘1’ 是字符占一个字节，”1”是字符串占两个字节(含有一个结束符号)。<br>　 ‘0’ 的ASCII数值表示为48，’a’ 的ASCII数值是97，’A’的ASCII数值是65。 </li><li>整型一般是两个字节, 字符型是一个字节，双精度一般是4个字节：<br>考试时候一般会说，在16位编译系统，或者是32位系统。碰到这种情况，不要去管，一样做题。掌握整型一般是两个字节, 字符型是一个字节，双精度一般是4个字节就可以了。</li><li><strong>转义字符的考查：</strong><br>在程序中 <code>int a = 0x6d</code>是把一个十六进制的数给变量a 注意这里的0x必须存在。  、<br>在程序中 <code>int a = 06d</code>是一个八进制的形式。<br>在转义字符中：<br><code>\x6d</code>才是合法的，0不能写，并且x是小写。<br><code>\141</code>是合法的， 0是不能写的。<br><code>\108</code>是非法的，因为不可以出现8。  </li><li><strong>算术运算符号的优先级别：</strong><br>同级别的有的是从左到右，有的是从右到左。  </li><li><strong>强制类型转换：</strong><br>  一定是 （int）a 不是  int（a），注意类型上一定有括号的。<br>注意（int）（a+b）和（int）a+b 的区别。 前是把a+b转型，后是把a转型再加b。  </li><li><strong>表达式的考查：</strong><br>是表达式就一定有数值。<br>赋值表达式：表达式数值是最左边的数值，a&#x3D;b&#x3D;5;该表达式为5，常量不可以赋值。<br>自加、自减表达式：假设a&#x3D;5，++a（是为6）， a++（为5）；<br><strong>运行的机理：</strong><br>++a 是先把变量的数值加上1，然后把得到的数值放到变量a中，然后再用这个 ++a表达式的数值为6 ，而a++是先用该表达式的数值为5 ，然后再把a的数值加上1为6，<br>再放到变量a中。 进行了++a和a++后在下面的程序中再用到a的话都是变量a中的6了。<br>  <strong>考试口诀：++在前先加后用，++在后先用后加。</strong><br>逗号表达式：优先级别最低 ；表达式的数值逗号最右边的那个表达式的数值。<br>（2，3，4）的表达式的数值就是4。  </li><li><strong>位运算的考查：</strong><br>　会有一到二题考试题目。<br>总的处理方法：几乎所有的位运算的题目都要按这个流程来处理（先把十进制变成二进制再变成十进制）。<br>例：　<br> char a &#x3D; 6, b;<br> b &#x3D; a&lt;&lt;2; <br>这种题目的计算是先要把a的十进制6化成二进制，再做位运算。  </li><li>018的数值是非法的，八进制是没有8的，逢8进1。   </li><li>%符号两边要求是整数。不是整数就错了。  </li><li>取整丢小数的情况：<br>int a &#x3D;1.6；<br>(int)a；　　&#x2F;&#x2F;该表达式的值为1</li></ol><h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><ol><li><p><strong>printf函数的格式考查：</strong><br><code>%d</code>对应整型；<code>%c</code>对应字符；<code>%f</code>对应单精度；<code>%ld</code>对应 <code>long int</code>；<code>%lf</code> 对应<code>double</code>。</p></li><li><p><strong>scanf函数的格式考察：</strong><br>注意该函数的第二个部分是 <code>&amp;a</code> 这样的地址，不是 <code>a</code> ；<br><code>Scanf(“%d%d%*d%d”,&amp;a,&amp;b,&amp;c)</code>; 跳过输入的第三个数据。  </p></li><li><p><strong>putchar ,getchar 函数的考查：</strong><br><code>char  a = getchar()</code> 是没有参数的，从键盘得到你输入的一个字符给变量a。<br><code>putchar(‘y’)</code>把字符y输出到屏幕中。  </p></li><li><p>如何实现两个变量x ，y中数值的互换（要求背下来）<br>不可以把 <code>x=y ,y=x</code>; 要用中间变量 <code>t=x；x=y；y=t</code>。</p></li><li><p>如何实现保留三位小数，第四位四舍五入的程序，（要求背下来）<br>这个有推广的意义，注意 <code>x = （int）x</code> 这样是把小数部分去掉。</p></li></ol><h1 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h1><p><strong>特别要注意：c语言中是用非0表示逻辑真的，用0 表示逻辑假的。</strong> </p><ol><li><p><strong>关系表达式：</strong><br>表达式的数值只能为<code>1</code>（表示为真），或<code>0</code>（表示假）<br>当关系的表达是为真的时候得到<code>1</code>。如 <code>9&gt;8</code>这个是真的，所以表达式的数值就是&#96;1  </p></li><li><p><strong>逻辑表达式：</strong><br>只能为1（表示为真），或0（表示假）</p><ul><li>共有&amp;&amp;   ||   ！ 三种逻辑运算符号。  </li><li>！&gt;&amp;&amp;&gt;||  优先的级别。  </li><li>注意短路现象。考试比较喜欢考到。  </li><li>要表示 x 是比0大，比10小的方法。 0&lt;x&lt;10是不可以的（一定记住）。是先计算0&lt;x 得到的结果为1或则0；再用0，或1与10比较得到的总是真（为1）。所以一定要用 (0&lt;x)&amp;&amp;(x&lt;10)表示比0大比10小。</li></ul></li><li><p><strong>if 语句</strong><br>else 是与最接近的if且没有else的相组合的。</p></li><li><p><strong>条件表达式：</strong><br>　<code>表达式1 ？表达式2 ：表达式3</code><br>　注意是当<code>非0</code> 时候是表达式2的数值，当为<code>0</code> 是就是表达式2的数值。<br><strong>考试口诀：真前假后</strong></p></li><li><p><strong>switch语句：</strong></p><ul><li>一定要注意 有<code>break</code> 和没有<code>break</code>的差别，书上（34页）的两个例子，没有<code>break</code>时候，只要有一个<code>case</code>匹配了，剩下的都要执行，有<code>break</code>则是直接跳出了<code>swiche</code>语句。  </li><li><code>switch</code>只可以和<code>break</code>一起用，不可以和<code>continue</code>用。</li></ul></li></ol><h1 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h1><ol><li><strong>三种循环结构：</strong> <ul><li><code>for（</code>） ； <code>while()</code>;   <code>do- while()</code>三种。</li><li><code>for</code>循环当中必须是两个分号，千万不要忘记。</li><li>写程序的时候一定要注意，循环一定要有结束的条件，否则成了死循环。</li><li><code>do-while()</code>循环的最后一个<code>while()</code>;的分号一定不能够丢。（当心上机改错）</li></ul></li><li><strong>break 和  continue的差别</strong><br><strong>记忆方法：</strong></li></ol><ul><li><strong>break</strong>：是打破的意思，（破了整个循环）所以看见break就退出真个一层循环。  </li><li><strong>continue</strong>：是继续的意思，（继续循环运算），但是要结束本次循环，就是循环体内剩下的语句不再执行，跳到循环开始，然后判断循环条件，进行新一轮的循环。</li></ul><ol start="3"><li><p><strong>嵌套循环</strong><br>就是有循环里面还有循环，这种比较复杂，要一层一层一步一步耐心的计算，一般记住两层是处理二维数组的。</p></li><li><p><code>while（（c=getchar()）!=’\n’）</code> <strong>和</strong> <code>while（c=getchar() !=’\n’）</code><strong>的差别</strong><br>先看<code>a = 3 != 2</code>  和<code>（a=3）！=2 </code>的区别：<br>（！&#x3D;号的级别高于&#x3D;号 所以第一个先计算 3！&#x3D;2）<br>第一个a的数值是得到的1；第二个a的数值是3。<br>考试注意点: 括号在这里的重要性。</p></li></ol><h1 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h1><p><strong>函数：是具有一定功能的一个程序块</strong>   </p><ol><li><strong>函数的参数，返回数值：</strong></li></ol><pre><code class="c=">  main()&#123;  int a = 5,b=6,c;  c = add(a,b);  printf(“%d”,c);&#125; //调用函数add  //a,b是实参  //整个函数得到一个数值就是Add函数的返回数值。   int add ( int x, int y)&#123;int z;  z=x+y;  return z;&#125;//被调用函数  //x，y是形式参数  //函数返回数值是整型  </code></pre><p>z就是这个add函数计算后得到的结果，就是函数返回给主程序的返回数值。<br>程序是在从上往下顺序执行，当碰到了函数add后，把a，b的数值穿给调用函数，程序暂时中断等待返回数值。当得到了返回数值后，再顺序的往下执行  </p><ol start="2"><li><p><strong>一定要注意参数之间的传递</strong><br>  实参和形参之间 传数值，和传地址的差别。（考试的重点）<br> 传数值的话，形参的变化不会改变实参的变化。<br> 传地址的话，形参的变化就会有可能改变实参的变化。</p></li><li><p><strong>函数声明的考查：</strong><br>一定要有：<code>函数名 函数的返回类型 函数的参数类型</code><br>不一定要有：<code>形参的名称</code></p></li></ol>]]></content:encoded>
+      
+      
+      <category domain="https://meng-xun.top/categories/%E5%A4%8D%E4%B9%A0/">复习</category>
+      
+      
+      <category domain="https://meng-xun.top/tags/%E5%A4%8D%E4%B9%A0/">复习</category>
+      
+      <category domain="https://meng-xun.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%9B%B4/">每日一更</category>
+      
+      
+      <comments>https://meng-xun.top/2023/12/03/C%E8%AF%AD%E8%A8%80%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>【实验2】 结构化程序设计-蒋社想教学班（信息安全23-1/2）</title>
@@ -117,9 +146,9 @@
       <category domain="https://meng-xun.top/categories/%E5%8D%9A%E5%AE%A2%E7%9A%84%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/">博客的食用方法</category>
       
       
-      <category domain="https://meng-xun.top/tags/%E5%8D%9A%E5%AE%A2/">博客</category>
-      
       <category domain="https://meng-xun.top/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E6%9B%B4/">每日一更</category>
+      
+      <category domain="https://meng-xun.top/tags/%E5%8D%9A%E5%AE%A2/">博客</category>
       
       
       <comments>https://meng-xun.top/2023/09/08/%E5%8D%9A%E5%AE%A2%E7%AE%80%E4%BB%8B/#disqus_thread</comments>
